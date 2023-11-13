@@ -1,0 +1,194 @@
+[
+    {
+        "name": "Aguascalientes",
+        "abbreviation": "AGS",
+        "capital": "Aguascalientes",
+        "urlImage": 1434635
+    },
+    {
+        "name": "Baja California",
+        "abbreviation": "BC",
+        "capital": "Mexicali",
+        "urlImage": 3769020
+    },
+    {
+        "name": "Baja California Sur",
+        "abbreviation": "BCS",
+        "capital": "La Paz",
+        "urlImage": 798447
+    },
+    {
+        "name": "Campeche",
+        "abbreviation": "CAM",
+        "capital": "San Francisco de Campeche",
+        "urlImage": 928363
+    },
+    {
+        "name": "Coahuila",
+        "abbreviation": "COAH",
+        "capital": "Saltillo",
+        "urlImage": 3146771
+    },
+    {
+        "name": "Colima",
+        "abbreviation": "COL",
+        "capital": "Colima",
+        "urlImage": 731391
+    },
+    {
+        "name": "Chiapas",
+        "abbreviation": "CHIS",
+        "capital": "Tuxtla Gutiérrez",
+        "urlImage": 5543828
+    },
+    {
+        "name": "Chihuahua",
+        "abbreviation": "CHIH",
+        "capital": "Chihuahua",
+        "urlImage": 3801487
+    },
+    {
+        "name": "Ciudad de México",
+        "abbreviation": "CDMX",
+        "capital": "Ciudad de México",
+        "urlImage": 9209944
+    },
+    {
+        "name": "Durango",
+        "abbreviation": "DGO",
+        "capital": "Durango",
+        "urlImage": 1832650
+    },
+    {
+        "name": "Guanajuato",
+        "abbreviation": "GTO",
+        "capital": "Guanajuato",
+        "urlImage": 6228175
+    },
+    {
+        "name": "Guerrero",
+        "abbreviation": "GRO",
+        "capital": "Chilpancingo",
+        "urlImage": 3533251
+    },
+    {
+        "name": "Hidalgo",
+        "abbreviation": "HGO",
+        "capital": "Pachuca",
+        "urlImage": 3082841
+    },
+    {
+        "name": "Jalisco",
+        "abbreviation": "JAL",
+        "capital": "Guadalajara",
+        "urlImage": 8344341
+    },
+    {
+        "name": "México",
+        "abbreviation": "MEX",
+        "capital": "Toluca",
+        "urlImage": 17427790
+    },
+    {
+        "name": "Michoacán",
+        "abbreviation": "MICH",
+        "capital": "Morelia",
+        "urlImage": 4825401
+    },
+    {
+        "name": "Morelos",
+        "abbreviation": "MOR",
+        "capital": "Cuernavaca",
+        "urlImage": 1971520
+    },
+    {
+        "name": "Nayarit",
+        "abbreviation": "NAY",
+        "capital": "Tepic",
+        "urlImage": 1280977
+    },
+    {
+        "name": "Nuevo León",
+        "abbreviation": "NL",
+        "capital": "Monterrey",
+        "urlImage": 5610153
+    },
+    {
+        "name": "Oaxaca",
+        "abbreviation": "OAX",
+        "capital": "Oaxaca de Juárez",
+        "urlImage": 4072148
+    },
+    {
+        "name": "Puebla",
+        "abbreviation": "PUE",
+        "capital": "Puebla",
+        "urlImage": 6583278
+    },
+    {
+        "name": "Querétaro",
+        "abbreviation": "QRO",
+        "capital": "Santiago de Querétaro",
+        "urlImage": 2279637
+    },
+    {
+        "name": "Quintana Roo",
+        "abbreviation": "QROO",
+        "capital": "Chetumal",
+        "urlImage": 1857985
+    },
+    {
+        "name": "San Luis Potosí",
+        "abbreviation": "SLP",
+        "capital": "San Luis Potosí",
+        "urlImage": 2822255
+    },
+    {
+        "name": "Sinaloa",
+        "abbreviation": "SIN",
+        "capital": "Culiacán",
+        "urlImage": 2991534
+    },
+    {
+        "name": "Sonora",
+        "abbreviation": "SON",
+        "capital": "Hermosillo",
+        "urlImage": 2850330
+    },
+    {
+        "name": "Tabasco",
+        "abbreviation": "TAB",
+        "capital": "Villahermosa",
+        "urlImage": 2427954
+    },
+    {
+        "name": "Tamaulipas",
+        "abbreviation": "TAMPS",
+        "capital": "Ciudad Victoria",
+        "urlImage": 3650602
+    },
+    {
+        "name": "Tlaxcala",
+        "abbreviation": "TLAX",
+        "capital": "Tlaxcala de Xicohténcatl",
+        "urlImage": 1342977
+    },
+    {
+        "name": "Veracruz",
+        "abbreviation": "VER",
+        "capital": "Xalapa",
+        "urlImage": 8112505
+    },
+    {
+        "name": "Yucatán",
+        "abbreviation": "YUC",
+        "capital": "Mérida",
+        "urlImage": 2320898
+    },
+    {
+        "name": "Zacatecas",
+        "abbreviation": "ZAC",
+        "capital": "Zacatecas",
+        "urlImage": 1622138
+    }
+]
