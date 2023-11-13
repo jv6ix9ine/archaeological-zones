@@ -3,44 +3,6 @@ import Gallery from "@/src/common/Gallery"
 import { ArrowDownIcon, ArrowDownRightIcon } from "@heroicons/react/24/outline"
 
 const HomePage = () => {
-    const images = [
-        {
-            url: "/images/placeholder.webp"
-        },
-        {
-            url: "/images/placeholder.webp"
-        },
-        {
-            url: "/images/placeholder.webp"
-        },
-        {
-            url: "/images/placeholder.webp"
-        },
-        {
-            url: "/images/placeholder.webp"
-        },
-        {
-            url: "/images/placeholder.webp"
-        },
-        {
-            url: "/images/placeholder.webp"
-        },
-        {
-            url: "/images/placeholder.webp"
-        },
-        {
-            url: "/images/placeholder.webp"
-        },
-        {
-            url: "/images/placeholder.webp"
-        },
-        {
-            url: "/images/placeholder.webp"
-        },
-        {
-            url: "/images/placeholder.webp"
-        },
-    ]
     return (
         <>
             <div className="pt-14 h-screen">
@@ -63,14 +25,7 @@ const HomePage = () => {
                         </div>
                     </div>
                 </section>
-                <div className="w-full h-1/2 md:h-[60%] relative grayscale-[20%] bg-cover bg-center  bg-no-repeat"
-                    style={
-                        {
-                            backgroundImage: `url(/images/hero.webp)`,
-                            // backgroundSize: 'auto',
-                        }
-                    }
-                >
+                <div className="w-full h-1/2 md:h-[60%] relative grayscale-[20%] bg-[url('/images/hero.webp')] bg-cover bg-center bg-no-repeat">
                     <button className="px-8 py-2 bg-stone-50 hover:bg-stone-200 text-stone-900 rounded-full shadow-lg absolute bottom-4 left-1/2 transform -translate-x-1/2">
                         <span className="flex items-center justify-between gap-2">
                             Explorar
