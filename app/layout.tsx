@@ -18,9 +18,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <ThemeContext attribute="class">
-        <body className={`${raleway.className} bg-neutral-100 dark:bg-neutral-950 duration-300`}>
+        <body className={`${raleway.className} bg-neutral-100 dark:bg-neutral-950 duration-300`} suppressHydrationWarning>
           <NavBar />
           <main className='w-full h-screen overflow-auto'>
             {children}

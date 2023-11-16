@@ -44,4 +44,25 @@ export default class ZoneService {
             }))
         }
     }
+    static async getById(zoneId: string) {
+        const response = await fetch(`${BASE_URL}/api/zones/${zoneId}`, {
+            cache: 'no-cache',
+            headers: {
+                "Content-Type": "application/json",
+            }
+        });
+        try {
+            const zone = await response.json() as IZone
+            return new Promise<ResponseType<IZone>>(resolve => resolve({
+                success: true,
+                data: zone,
+                message: 'Zones found successfully'
+            }))
+        } catch (error) {
+            return new Promise<ResponseType<IZone>>(resolve => resolve({
+                success: false,
+                message: (error as Error).message
+            }))
+        }
+    }
 }

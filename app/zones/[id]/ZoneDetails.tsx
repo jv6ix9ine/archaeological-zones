@@ -1,8 +1,16 @@
-import React from 'react'
+import Slider from "@/src/common/Slider"
+import { IZone } from "@/src/interfaces/zone"
 
-const ZoneDetails = () => {
+type Props = {
+  zone: IZone
+}
+
+const ZoneDetails = ({ zone }: Props) => {
   return (
-    <div className='pt-14 h-screen'>ZoneDetails</div>
+    <div className='pt-16 h-screen container mx-auto'>
+      <h1>{zone.name}</h1>
+      {/* <Slider/> */}
+    </div>
   )
 }
 
