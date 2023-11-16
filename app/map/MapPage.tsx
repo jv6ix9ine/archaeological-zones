@@ -4,7 +4,7 @@ import React from 'react'
 
 const MapPage = () => {
   return (
-    <div className='w-screen h-screen'>
+    <div className='pt-14 h-screen'>
         <Map/>
     </div>
   )

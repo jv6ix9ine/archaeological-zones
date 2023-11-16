@@ -11,7 +11,8 @@ const Badge = ({ title, className }: Props) => {
         <motion.div
             whileHover={{ scale: 1.08 }}
             whileTap={{scale: 0.95}}
-            className={`py-1 px-2 rounded-full ring-1 text-xs ring-neutral-800 cursor-pointer ${className}`}
+            transition={{duration: 0.15}}
+            className={`${className} py-1 px-2 cursor-pointer rounded-full ring-1 ring-neutral-950 dark:ring-neutral-50`}
         >
             <span>{title}</span>
         </motion.div>

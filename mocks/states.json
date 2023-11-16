@@ -3,192 +3,192 @@
         "name": "Aguascalientes",
         "abbreviation": "AGS",
         "capital": "Aguascalientes",
-        "urlImage": 1434635
+        "imageUrl": "/states/aguascalientes.webp"
     },
     {
         "name": "Baja California",
         "abbreviation": "BC",
         "capital": "Mexicali",
-        "urlImage": 3769020
+        "imageUrl": "/states/bajacalifornia.webp"
     },
     {
         "name": "Baja California Sur",
         "abbreviation": "BCS",
         "capital": "La Paz",
-        "urlImage": 798447
+        "imageUrl": "/states/bajacaliforniasur.webp"
     },
     {
         "name": "Campeche",
         "abbreviation": "CAM",
         "capital": "San Francisco de Campeche",
-        "urlImage": 928363
+        "imageUrl": "/states/campeche.webp"
     },
     {
         "name": "Coahuila",
         "abbreviation": "COAH",
         "capital": "Saltillo",
-        "urlImage": 3146771
+        "image": "/images/placeholder.webp"
     },
     {
         "name": "Colima",
         "abbreviation": "COL",
         "capital": "Colima",
-        "urlImage": 731391
+        "image": "/images/placeholder.webp"
     },
     {
         "name": "Chiapas",
         "abbreviation": "CHIS",
         "capital": "Tuxtla Gutiérrez",
-        "urlImage": 5543828
+        "image": "/images/placeholder.webp"
     },
     {
         "name": "Chihuahua",
         "abbreviation": "CHIH",
         "capital": "Chihuahua",
-        "urlImage": 3801487
+        "image": "/images/placeholder.webp"
     },
     {
         "name": "Ciudad de México",
         "abbreviation": "CDMX",
         "capital": "Ciudad de México",
-        "urlImage": 9209944
+        "image": "/images/placeholder.webp"
     },
     {
         "name": "Durango",
         "abbreviation": "DGO",
         "capital": "Durango",
-        "urlImage": 1832650
+        "image": "/images/placeholder.webp"
     },
     {
         "name": "Guanajuato",
         "abbreviation": "GTO",
         "capital": "Guanajuato",
-        "urlImage": 6228175
+        "image": "/images/placeholder.webp"
     },
     {
         "name": "Guerrero",
         "abbreviation": "GRO",
         "capital": "Chilpancingo",
-        "urlImage": 3533251
+        "image": "/images/placeholder.webp"
     },
     {
         "name": "Hidalgo",
         "abbreviation": "HGO",
         "capital": "Pachuca",
-        "urlImage": 3082841
+        "image": "/images/placeholder.webp"
     },
     {
         "name": "Jalisco",
         "abbreviation": "JAL",
         "capital": "Guadalajara",
-        "urlImage": 8344341
+        "image": "/images/placeholder.webp"
     },
     {
         "name": "México",
         "abbreviation": "MEX",
         "capital": "Toluca",
-        "urlImage": 17427790
+        "image": "/images/placeholder.webp"
     },
     {
         "name": "Michoacán",
         "abbreviation": "MICH",
         "capital": "Morelia",
-        "urlImage": 4825401
+        "image": "/images/placeholder.webp"
     },
     {
         "name": "Morelos",
         "abbreviation": "MOR",
         "capital": "Cuernavaca",
-        "urlImage": 1971520
+        "image": "/images/placeholder.webp"
     },
     {
         "name": "Nayarit",
         "abbreviation": "NAY",
         "capital": "Tepic",
-        "urlImage": 1280977
+        "image": "/images/placeholder.webp"
     },
     {
         "name": "Nuevo León",
         "abbreviation": "NL",
         "capital": "Monterrey",
-        "urlImage": 5610153
+        "image": "/images/placeholder.webp"
     },
     {
         "name": "Oaxaca",
         "abbreviation": "OAX",
         "capital": "Oaxaca de Juárez",
-        "urlImage": 4072148
+        "image": "/images/placeholder.webp"
     },
     {
         "name": "Puebla",
         "abbreviation": "PUE",
         "capital": "Puebla",
-        "urlImage": 6583278
+        "image": "/images/placeholder.webp"
     },
     {
         "name": "Querétaro",
         "abbreviation": "QRO",
         "capital": "Santiago de Querétaro",
-        "urlImage": 2279637
+        "image": "/images/placeholder.webp"
     },
     {
         "name": "Quintana Roo",
         "abbreviation": "QROO",
         "capital": "Chetumal",
-        "urlImage": 1857985
+        "image": "/images/placeholder.webp"
     },
     {
         "name": "San Luis Potosí",
         "abbreviation": "SLP",
         "capital": "San Luis Potosí",
-        "urlImage": 2822255
+        "image": "/images/placeholder.webp"
     },
     {
         "name": "Sinaloa",
         "abbreviation": "SIN",
         "capital": "Culiacán",
-        "urlImage": 2991534
+        "image": "/images/placeholder.webp"
     },
     {
         "name": "Sonora",
         "abbreviation": "SON",
         "capital": "Hermosillo",
-        "urlImage": 2850330
+        "image": "/images/placeholder.webp"
     },
     {
         "name": "Tabasco",
         "abbreviation": "TAB",
         "capital": "Villahermosa",
-        "urlImage": 2427954
+        "image": "/images/placeholder.webp"
     },
     {
         "name": "Tamaulipas",
         "abbreviation": "TAMPS",
         "capital": "Ciudad Victoria",
-        "urlImage": 3650602
+        "image": "/images/placeholder.webp"
     },
     {
         "name": "Tlaxcala",
         "abbreviation": "TLAX",
         "capital": "Tlaxcala de Xicohténcatl",
-        "urlImage": 1342977
+        "image": "/images/placeholder.webp"
     },
     {
         "name": "Veracruz",
         "abbreviation": "VER",
         "capital": "Xalapa",
-        "urlImage": 8112505
+        "image": "/images/placeholder.webp"
     },
     {
         "name": "Yucatán",
         "abbreviation": "YUC",
         "capital": "Mérida",
-        "urlImage": 2320898
+        "image": "/images/placeholder.webp"
     },
     {
         "name": "Zacatecas",
         "abbreviation": "ZAC",
         "capital": "Zacatecas",
-        "urlImage": 1622138
+        "image": "/images/placeholder.webp"
     }
 ]

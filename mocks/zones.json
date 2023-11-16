@@ -1,0 +1,19 @@
+[
+    {
+        "choords":{
+            "latitude":32.539845,
+            "longitude":-116.1000639
+        },
+        "description":"La zona es conocida por sus numerosas pinturas rupestres que datan de diferentes períodos, desde hace miles de años hasta el periodo histórico. Estas pinturas ofrecen representaciones de la vida cotidiana, escenas de caza, figuras antropomórficas y zoomórficas, entre otros motivos. Las pinturas rupestres del Vallecito son una manifestación artística y cultural única que proporciona información valiosa sobre las poblaciones prehistóricas de la región.",
+        "images": [
+            {
+                "url":"/states/bajacalifornia/1.jpeg"
+            }
+        ],
+        "location":"Región de la Sierra de San Francisco",
+        "mainImageUrl":"",
+        "name":"El Vallecito",
+        "schedules":"Miércoles a domingo de 8 a 15 h",
+        "state":"655511d2d3537a612689e027"
+    }
+]
