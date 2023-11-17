@@ -2,11 +2,18 @@
 import { useEffect, useRef } from 'react'
 import { Loader } from '@googlemaps/js-api-loader';
 
-const Map = () => {
+type Props = {
+    choords?: {
+        latitude: number,
+        longitude: number,
+    },
+    zoom?: number
+}
+
+const Map = ({ choords, zoom }: Props) => {
     const mapHome = useRef<HTMLDivElement>(null)
     useEffect(() => {
         const initMap = async () => {
-            console.log("map init");
             const loader = new Loader({
                 apiKey: String(process.env.NEXT_PUBLIC_MAPS_API_KEY),
                 version: "weekly"
@@ -15,25 +22,25 @@ const Map = () => {
             const { Marker } = await loader.importLibrary('marker') as google.maps.MarkerLibrary
             const map = new Map(mapHome.current as HTMLDivElement, {
                 center: {
-                    lat: 20.6787816,
-                    lng: -88.5710518
+                    lat: choords?.latitude ?? 0,
+                    lng: choords?.longitude ?? 0
                 },
-                zoom: 6,
+                zoom: zoom,
             })
             const marker = new Marker({
                 map,
                 position: {
-                    lat: 20.6787816,
-                    lng: -88.5710518
+                    lat: choords?.latitude ?? 0,
+                    lng: choords?.longitude ?? 0
                 }
             })
-            const marker2 = new Marker({
-                map,
-                position: {
-                    lat: 20.1451481,
-                    lng: -89.9257975
-                }
-            })
+            // const marker2 = new Marker({
+            //     map,
+            //     position: {
+            //         lat: 20.1451481,
+            //         lng: -89.9257975
+            //     }
+            // })
         }
         initMap()
     }, [])
