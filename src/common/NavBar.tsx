@@ -7,7 +7,7 @@ import ThemeSwitcher from './ThemeSwitcher'
 const NavBar = () => {
     const router = useRouter()
     return (
-        <nav className='fixed top-0 shadow-md h-14 w-full z-50 px-4 lg:px-6 bg-neutral-100 dark:bg-neutral-950 duration-300 dark:shadow-md dark:shadow-neutral-50/5'>
+        <nav className='fixed top-0 shadow-md h-14 w-full z-40 px-4 lg:px-6 bg-neutral-100 dark:bg-neutral-950 duration-300 dark:shadow-md dark:shadow-neutral-50/5'>
             <div className='h-full flex items-center justify-between'>
                 <button
                     onClick={() => router.push("/home")}

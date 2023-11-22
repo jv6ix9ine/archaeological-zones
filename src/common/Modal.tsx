@@ -18,7 +18,7 @@ const Modal = ({ open, setOpen, children }: Props) => {
     <AnimatePresence>
       {
         open &&
-        <motion.div className="fixed w-full inset-0 z-40 flex items-center justify-center backdrop-blur-sm  "
+        <motion.div className="fixed w-full inset-0 z-50 flex items-center justify-center backdrop-blur-sm  "
           initial={{ opacity: 0, scale: 0.3 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.3 }}

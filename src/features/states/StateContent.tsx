@@ -4,13 +4,14 @@ import { IZone } from '@/src/interfaces/zone'
 import ZoneService from '@/src/services/zones'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 type Props = {
     state: IState
+    setOpen: Dispatch<SetStateAction<boolean>>
 }
 
-const StateContent = ({ state }: Props) => {
+const StateContent = ({ state, setOpen }: Props) => {
 
     const [zones, setZones] = useState<IZone[]>([])
     const router = useRouter()
@@ -19,11 +20,16 @@ const StateContent = ({ state }: Props) => {
         ZoneService.getByStateId(state._id ?? "").then((response) => {
             if (response.data) {
                 setZones(response.data)
-                
+
             }
         })
         console.log(zones)
     }, [state, zones])
+
+    function handleSelected(zoneId: string){
+        setOpen(false)
+        router.push(`zones/${zoneId}`)
+    }
 
 
     return (
@@ -54,7 +60,7 @@ const StateContent = ({ state }: Props) => {
                 {
                     // zones.length > 0 ?
                     zones.map((zone, index) => (
-                        <div key={index} className={`relative overflow-hidden rounded-md break-inside-auto`} onClick={() => router.push(`zones/${zone._id}`)} >
+                        <div key={index} className={`relative overflow-hidden rounded-md break-inside-auto`} onClick={() => handleSelected(zone._id)} >
                             <Image
                                 alt='Grid Image'
                                 src={zone.mainImageUrl ?? ""}

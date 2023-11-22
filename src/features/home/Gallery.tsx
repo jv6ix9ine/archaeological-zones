@@ -57,7 +57,7 @@ const Gallery = ({ states }: Props) => {
                 </div>
             </section>
             <Modal open={modal} setOpen={setModal}>
-                <StateContent state={selectedState ?? {} as IState} />
+                <StateContent state={selectedState ?? {} as IState} setOpen={setModal} />
             </Modal>
         </>
 

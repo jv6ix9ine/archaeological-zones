@@ -10,9 +10,9 @@ type Props = {
 const ZoneDetails = ({ zone }: Props) => {
   return (
     <div className='pt-16 h-screen container max-w-2xl mx-auto p-4'>
-      <div>
+      <div className="pt-2">
         <h1 className="text-3xl font-semibold mb-4">{zone.name}</h1>
-        <Image src={zone.mainImageUrl ?? ""} alt={zone.name} className="w-full object-cover object-center mb-4 rounded-md hover:saturate-[1.25]" width={1000} height={1000} />
+        <Image src={zone.mainImageUrl ?? ""} alt={zone.name} className="w-full object-cover object-center mb-4 rounded-md hover:saturate-[1.25] h-60" width={1000} height={1000} />
         <p className="mt-4"><span className="font-semibold">Ubicación:</span> {zone.location}</p>
         <p><span className="font-semibold">Horarios:</span> {zone.schedules}</p>
         <p className="mt-4">

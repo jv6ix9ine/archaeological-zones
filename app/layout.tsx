@@ -4,6 +4,7 @@ import '@/app/globals.css'
 import NavBar from '@/src/common/NavBar'
 import { ArrowDownIcon } from '@heroicons/react/20/solid'
 import { ThemeContext } from '@/src/context/ThemeContext'
+import Footer from '@/src/common/Footer'
 
 const raleway = Raleway({ subsets: ['latin'] })
 
@@ -22,9 +23,10 @@ export default function RootLayout({
       <body className={`${raleway.className} bg-neutral-100 dark:bg-neutral-950 duration-300`} suppressHydrationWarning>
         <ThemeContext attribute="class" defaultTheme="system" enableSystem>
           <NavBar />
-          <main className='w-full h-screen overflow-auto'>
+          <main className='w-full overflow-auto'>
             {children}
           </main>
+          <Footer />
         </ThemeContext>
       </body>
     </html>
