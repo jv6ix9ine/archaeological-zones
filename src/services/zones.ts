@@ -4,7 +4,7 @@ import { BASE_URL, ResponseType } from "./api";
 export default class ZoneService {
     static async getAll() {
         const response = await fetch(`${BASE_URL}/api/zones/`, {
-            cache: 'no-cache',
+            cache: 'no-store',
             headers: {
                 "Content-Type": "application/json",
             }
@@ -25,7 +25,7 @@ export default class ZoneService {
     }
     static async getByStateId(stateId: string) {
         const response = await fetch(`${BASE_URL}/api/states/${stateId}/zones`, {
-            cache: 'no-cache',
+            cache: 'no-store',
             headers: {
                 "Content-Type": "application/json",
             }
@@ -46,7 +46,7 @@ export default class ZoneService {
     }
     static async getById(zoneId: string) {
         const response = await fetch(`${BASE_URL}/api/zones/${zoneId}`, {
-            cache: 'no-cache',
+            cache: 'no-store',
             headers: {
                 "Content-Type": "application/json",
             }

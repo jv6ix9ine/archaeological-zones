@@ -4,7 +4,7 @@ import { BASE_URL, ResponseType } from "./api";
 export default class StateService {
     static async getAll() {
         const response = await fetch(`${BASE_URL}/api/states/`, {
-            cache: 'no-cache',
+            cache: 'no-store',
             headers: {
                 "Content-Type": "application/json",
             }
