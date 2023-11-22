@@ -35,5 +35,51 @@
         "name":"Chichén Itzá",
         "schedules":"Lunes a domingo de 8 a 16 h",
         "state":"655e3e49b0a6b9638ecc73f1"
+    },
+    {
+        "choords":{
+            "latitude":20.215197,
+            "longitude":-87.430463
+        },
+        "description":"El sitio está presidido por El Castillo, el basamento más alto de Tulum, que conserva un templo con tres accesos ornamentados con columnas serpentinas y dos mascarones zoomorfos en las esquinas. Frente al Castillo hay una plataforma para danzas y al suroeste se encuentra el Templo de la Serie Inicial, donde se encontró la fecha más temprana documentada en Tulum: 564 d.C.",
+        "images": [
+            {
+                "url":"/zones/tulum/1.jpg"
+            },
+            {
+                "url":"/zones/tulum/2.jpg"
+            },
+            {
+                "url":"/zones/tulum/3.jpg"
+            }
+        ],
+        "location":"La entrada principal se localiza en el km. 230 de la carretera federal Chetumal – Cancún, 128 kilómetros al sur de Cancún y es fácilmente accesible a través de la carretera federal 307.",
+        "mainImageUrl":"/zones/tulum/main.jpg",
+        "name":"Tulum",
+        "schedules":"Lunes a domingo de 8 a 17 h",
+        "state":"655e3e49b0a6b9638ecc7406"
+    },
+    {
+        "choords":{
+            "latitude":19.693343,
+            "longitude":-98.847294
+        },
+        "description":"La Ciudad Prehispánica de Teotihuacan fue uno de los centros urbanos más grandes del mundo antiguo, que llegó a concentrar una población mayor a los 100,000 habitantes en su momento de máximo esplendor. Situada en un valle rico en recursos naturales, Teotihuacan fue la sede del poder de una de las sociedades mesoamericanas más influyentes en los ámbitos político, económico, comercial, religioso y cultural, cuyos rasgos marcaron permanentemente a los pueblos del altiplano mexicano, traspasando el tiempo y llegando hasta nosotros con la misma fuerza y grandeza con que sus constructores la planearon.",
+        "images": [
+            {
+                "url":"/zones/teotihuacan/1.jpg"
+            },
+            {
+                "url":"/zones/teotihuacan/2.jpg"
+            },
+            {
+                "url":"/zones/teotihuacan/3.jpg"
+            }
+        ],
+        "location":"Desde la Ciudad de México se puede llegar a través de la autopista México-Pachuca, saliendo por la Av. Insurgentes norte, hasta entroncar con la autopista Ecatepec-Pirámides. También hay acceso desde las autopistas México-Tuxpan y Arco Norte, además de la carretera libre México-Teotihuacan.",
+        "mainImageUrl":"/zones/teotihuacan/main.jpg",
+        "name":"Teotihuacán",
+        "schedules":"Lunes a domingo de 8 a 17 h",
+        "state":"655e3e49b0a6b9638ecc73fe"
     }
 ]

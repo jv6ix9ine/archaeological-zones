@@ -15,12 +15,12 @@ const Footer = () => {
                         <li><Link href={`/`} className='hover:underline'>Inicio</Link></li>
                         <li><Link href={`/zones`} className='hover:underline'>Zonas Arqueológicas</Link></li>
                         <li><Link href={`/map`} className='hover:underline'>Mapa</Link></li>
-                        <li><Link href={`/states`} className='hover:underline'>Estados</Link></li>
+                        {/* <li><Link href={`/states`} className='hover:underline'>Estados</Link></li> */}
                     </ul>
                 </div>
                 <div className='flex gap-4 items-center'>
                     <AcademicCapIcon width={20} height={20} className='text-neutral-900 dark:text-neutral-50 ' />
-                    <span className='font-sans'>IDGS-73</span>
+                    <p>IDYGS-<span className='font-sans'>73</span> | Noemi, German, Gabriel, Donovan and Joath.</p>
                 </div>
             </div>
         </footer>

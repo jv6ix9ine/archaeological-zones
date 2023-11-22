@@ -37,7 +37,7 @@ const StateContent = ({ state, setOpen }: Props) => {
             <Image src={`${state?.imageUrl}`}
                 alt='image'
                 height={800} width={800}
-                className='w-full h-64 lg:h-72 object-cover object-center'
+                className='w-full h-64 lg:h-72 object-cover object-center saturate-[1.4]'
             />
             <motion.div
                 className='p-4'
