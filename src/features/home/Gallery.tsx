@@ -6,13 +6,15 @@ import { motion } from 'framer-motion'
 import { IState } from '@/src/interfaces/state'
 import { IZone } from '@/src/interfaces/zone'
 import StateContent from '@/src/features/states/StateContent'
+import Link from 'next/link'
 
 type Props = {
     ref?: RefObject<HTMLDivElement>
     states: IState[]
 }
 
-const Gallery = ({ states }: Props) => {
+const Gallery = ({ states, ref }: Props) => {
+    console.log(ref?.current)
     const [modal, setModal] = useState(false)
     const [selectedState, setSelectedState] = useState<IState>()
     const [currentZones, setCurrentZones] = useState<IZone[] | undefined>(undefined)
@@ -30,7 +32,7 @@ const Gallery = ({ states }: Props) => {
 
     return (
         <>
-            <section className="py-16 px-4 lg:px-6 max-w-7xl mx-auto text-neutral-950 dark:text-neutral-50" ref={galleyRef}>
+            <section className="py-16 px-4 lg:px-6 max-w-7xl mx-auto text-neutral-950 dark:text-neutral-50" id='zones'>
                 <div className='py-8'>
                     <h1 className="text-3xl md:text-4xl">Zonas arqueológicas</h1>
                 </div>
@@ -57,6 +59,11 @@ const Gallery = ({ states }: Props) => {
             <Modal open={modal} setOpen={setModal}>
                 <StateContent state={selectedState ?? {} as IState} setOpen={setModal} />
             </Modal>
+            {/* <Link href={"/#gallery"}>
+                    <button>
+                        ir a galeria
+                    </button>
+            </Link> */}
         </>
 
     )

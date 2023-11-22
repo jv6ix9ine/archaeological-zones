@@ -12,7 +12,7 @@ const Footer = () => {
                 </div>
                 <div>
                     <ul className='grid grid-cols-2 gap-4 md:flex md:gap-8'>
-                        <li><Link href={`/`} className='hover:underline'>Inicio</Link></li>
+                        <li><Link href={`/#home`} className='hover:underline'>Inicio</Link></li>
                         <li><Link href={`/zones`} className='hover:underline'>Zonas Arqueológicas</Link></li>
                         <li><Link href={`/map`} className='hover:underline'>Mapa</Link></li>
                         {/* <li><Link href={`/states`} className='hover:underline'>Estados</Link></li> */}

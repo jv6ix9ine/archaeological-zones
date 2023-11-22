@@ -10,7 +10,7 @@ const NavBar = () => {
         <nav className='fixed top-0 shadow-md h-14 w-full z-40 px-4 lg:px-6 bg-neutral-100 dark:bg-neutral-950 duration-300 dark:shadow-md dark:shadow-neutral-50/5'>
             <div className='h-full flex items-center justify-between'>
                 <button
-                    onClick={() => router.push("/home")}
+                    onClick={() => router.push("/#home", { scroll: true})}
                     className='p-2 rounded-lg hover:bg-neutral-300 dark:hover:bg-neutral-700 hover:scale-105 active:scale-95 duration-200'
                 >
                     <HomeIcon width={24} height={24} className='text-neutral-950 dark:text-neutral-50' />

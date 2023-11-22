@@ -1,12 +1,14 @@
 'use client'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Loader } from '@googlemaps/js-api-loader';
 
+type Choords = {
+    latitude: number,
+    longitude: number,
+}
+
 type Props = {
-    choords?: {
-        latitude: number,
-        longitude: number,
-    },
+    choords?: Choords
     zoom?: number
 }
 
@@ -22,10 +24,10 @@ const Map = ({ choords, zoom }: Props) => {
             const { Marker } = await loader.importLibrary('marker') as google.maps.MarkerLibrary
             const map = new Map(mapHome.current as HTMLDivElement, {
                 center: {
-                    lat: choords?.latitude ?? 0,
-                    lng: choords?.longitude ?? 0
+                    lat: choords?.latitude ?? 24.7917594,
+                    lng: choords?.longitude ?? -103.2680313
                 },
-                zoom: zoom,
+                zoom: zoom ?? 5.6,    
             })
             const marker = new Marker({
                 map,
@@ -34,16 +36,9 @@ const Map = ({ choords, zoom }: Props) => {
                     lng: choords?.longitude ?? 0
                 }
             })
-            // const marker2 = new Marker({
-            //     map,
-            //     position: {
-            //         lat: 20.1451481,
-            //         lng: -89.9257975
-            //     }
-            // })
         }
         initMap()
-    }, [])
+    }, [choords?.latitude, choords?.longitude, zoom])
     return (
         <div ref={mapHome} className='h-full w-full'></div>
     )
