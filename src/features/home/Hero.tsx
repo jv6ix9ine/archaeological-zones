@@ -41,7 +41,7 @@ const Hero = () => {
                                 src={item.url}
                                 height={500}
                                 width={500}
-                                className='h-full w-full hover:saturate-[1.25] object-cover object-center hover:scale-110 hover:cursor-pointer duration-150'
+                                className='h-full w-full hover:saturate-[1.25] object-cover object-center hover:scale-110 duration-150'
                             />
                         </div>
                     ))

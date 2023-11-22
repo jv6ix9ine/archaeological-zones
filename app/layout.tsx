@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Raleway } from 'next/font/google'
+import { Raleway, Poppins } from 'next/font/google'
 import '@/app/globals.css'
 import NavBar from '@/src/common/NavBar'
 import { ArrowDownIcon } from '@heroicons/react/20/solid'

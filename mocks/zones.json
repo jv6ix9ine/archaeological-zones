@@ -14,6 +14,26 @@
         "mainImageUrl":"",
         "name":"El Vallecito",
         "schedules":"Miércoles a domingo de 8 a 15 h",
-        "state":"655511d2d3537a612689e027"
+        "state":"655e3e49b0a6b9638ecc73f1"
+    },
+    {
+        "choords":{
+            "latitude":20.6809718,
+            "longitude":-88.5710518
+        },
+        "description":"Chichén Itzá es el mejor ejemplo de los movimientos migratorios que se dieron en Mesoamérica hacia el Posclásico Temprano, ya que reúne rasgos de cultura material tanto del área Maya como del centro de México, particularmente de filiación Tolteca. Además Chichén Itzá fue capital de un amplio territorio en la península de Yucatán, encabezado por la liga de Mayapán, del 987 hasta el año 1200 d. C. La zona arqueológica Chichén Itzá es famosa mundialmente por el juego de luz y sombra que en cada equinoccio ocurre sobre la escalinata del basamento piramidal conocido como El castillo.",
+        "images": [
+            {
+                "url":"/zones/chichenitza/1.jpg"
+            },
+            {
+                "url":"/zones/chichenitza/2.jpg"
+            }
+        ],
+        "location":"Se localiza a 115 kilómetros de la ciudad de Mérida, Yucatán, tomando la carretera No. 180 hacia el poblado de Piste, del cual dista 2 kilómetros el sitio arqueológico",
+        "mainImageUrl":"/zones/chichenitza/main.webp",
+        "name":"Chichén Itzá",
+        "schedules":"Lunes a domingo de 8 a 16 h",
+        "state":"655e3e49b0a6b9638ecc73f1"
     }
 ]

@@ -1,13 +1,11 @@
 'use client'
 import { RefObject, useRef, useState } from 'react'
-import Modal from '../../common/Modal'
+import Modal from '@/src/common/Modal'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { IState } from '../../interfaces/state'
-import { PhotoIcon } from '@heroicons/react/24/outline'
+import { IState } from '@/src/interfaces/state'
 import { IZone } from '@/src/interfaces/zone'
-import ZoneCard from '../zones/ZoneCard'
-import StateContent from '../states/StateContent'
+import StateContent from '@/src/features/states/StateContent'
 
 type Props = {
     ref?: RefObject<HTMLDivElement>
@@ -46,7 +44,7 @@ const Gallery = ({ states }: Props) => {
                                     src={state.imageUrl ?? ""}
                                     height={500}
                                     width={500}
-                                    className='h-64 w-full saturate-[1.25] object-cover object-center hover:scale-110 hover:cursor-pointer duration-150'
+                                    className='h-64 w-full saturate-[1.4] object-cover object-center hover:scale-110 hover:cursor-pointer duration-150'
                                 />
                                 <span className='absolute z-20 bottom-4 left-4 text-2xl text-neutral-50 font-medium'>
                                     {state.name}

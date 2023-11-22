@@ -1,9 +1,12 @@
-import React from 'react'
+import ZonesPage from './ZonesPage'
+import ZoneController from '@/src/server/controller/zones'
 
-const ZonesPage = () => {
+const Zones = async() => {
+  const zonesRequest = await ZoneController.getAll()
+  const zones = await zonesRequest.json()
   return (
-    <div>ZonesPage</div>
+    <ZonesPage zones={zones ?? []}/>
   )
 }
 
-export default ZonesPage
+export default Zones
