@@ -24,14 +24,13 @@ const Hero = () => {
                         width={36}
                         height={36}
                         className=' absolute bottom-0 right-0 cursor-pointer hover:rotate-45 duration-150'
-                    // onClick={scrollToSection}
                     />
                 </div>
                 <p className="max-w-xs md:max-w-md">
                     Sumérgete en la rica historia y cultura de México explorando un catálogo de zonas arqueológicas impresionantes.
                 </p>
                 <PopularZones />
-                <Button className='hidden md:block' />
+                <Button className='hidden md:block' variant="light" icon={<ArrowDownIcon width={20} height={20} className='text-inherit' />}>Explorar</Button>
             </div>
             <div className='hidden h-[50%] lg:h-full md:grid grid-cols-3 grid-rows-3 lg:w-[60%] gap-2'>
                 {
@@ -57,7 +56,7 @@ const Hero = () => {
                     className='h-full w-full hover:saturate-[1.25] object-cover object-center hover:scale-110 hover:cursor-pointer duration-150'
                 />
                 <div className='w-full flex justify-center relative'>
-                    <Button className="absolute bottom-4 z-10" />
+                    <Button className="absolute bottom-4 z-10" variant='primary' icon={<ArrowDownIcon width={20} height={20} className='text-inherit' />}>Explorar</Button> 
                 </div>
             </div>
         </section>

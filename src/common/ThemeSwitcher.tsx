@@ -19,11 +19,17 @@ const ThemeSwitcher = () => {
         <>
             {
                 theme === 'light' ?
-                    <button className='p-2 rounded-lg hover:bg-neutral-300 duration-300' onClick={() => setTheme('dark')}>
+                    <button
+                        className='p-2 rounded-lg hover:bg-neutral-300 hover:scale-105 active:scale-95 duration-200'
+                        onClick={() => setTheme('dark')}
+                    >
                         <MoonIcon width={24} height={24} className='text-neutral-950 dark:text-neutral-50' />
                     </button>
                     :
-                    <button className='p-2 rounded-lg hover:bg-neutral-300 dark:hover:bg-neutral-700 duration-300' onClick={() => setTheme('light')}>
+                    <button
+                        className='p-2 rounded-lg hover:bg-neutral-300 dark:hover:bg-neutral-700 hover:scale-105 active:scale-95 duration-200'
+                        onClick={() => setTheme('light')}
+                    >
                         <SunIcon width={24} height={24} className='text-neutral-950 dark:text-neutral-50' />
                     </button>
             }

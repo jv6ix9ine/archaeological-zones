@@ -19,13 +19,15 @@ const StateContent = ({ state }: Props) => {
         ZoneService.getByStateId(state._id ?? "").then((response) => {
             if (response.data) {
                 setZones(response.data)
+                
             }
         })
-    }, [state])
+        console.log(zones)
+    }, [state, zones])
 
 
     return (
-        <div className='w-full flex flex-col'>
+        <div className='w-full flex flex-col h-[90vh]'>
             <Image src={`${state?.imageUrl}`}
                 alt='image'
                 height={800} width={800}
