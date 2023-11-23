@@ -10,6 +10,16 @@ const nextConfig = {
         ]
     },
     optimizeFonts: true,
+    images: {
+        remotePatterns:[
+            {
+                protocol: 'https',
+                hostname: '**.**.**',
+                port: '',
+                pathname:'/**'
+            }
+        ]
+    }
 }
 
 module.exports = nextConfig

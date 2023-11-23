@@ -2,7 +2,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Loader } from '@googlemaps/js-api-loader';
 import { IZone } from '../interfaces/zone';
-import { useRouter } from 'next/navigation';
 
 export type Choords = {
     latitude: number,
@@ -16,7 +15,6 @@ type Props = {
 }
 
 const Map = ({ choords, zoom, zones }: Props) => {
-    const router = useRouter()
     const mapHome = useRef<HTMLDivElement>(null)
     useEffect(() => {
         const initMap = async () => {
