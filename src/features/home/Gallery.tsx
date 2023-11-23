@@ -1,12 +1,9 @@
 'use client'
-import { RefObject, useRef, useState } from 'react'
+import { RefObject, useState } from 'react'
 import Modal from '@/src/common/Modal'
 import Image from 'next/image'
-import { motion } from 'framer-motion'
 import { IState } from '@/src/interfaces/state'
-import { IZone } from '@/src/interfaces/zone'
 import StateContent from '@/src/features/states/StateContent'
-import Link from 'next/link'
 
 type Props = {
     ref?: RefObject<HTMLDivElement>
@@ -14,21 +11,13 @@ type Props = {
 }
 
 const Gallery = ({ states, ref }: Props) => {
-    console.log(ref?.current)
     const [modal, setModal] = useState(false)
     const [selectedState, setSelectedState] = useState<IState>()
-    const [currentZones, setCurrentZones] = useState<IZone[] | undefined>(undefined)
-    const galleyRef = useRef(null)
 
     const handleSelectedState = (state: IState) => {
         setSelectedState(state)
         setModal(!modal)
     }
-
-    const modalVariants = {
-        hidden: { opacity: 0, y: '-100%' },
-        visible: { opacity: 1, y: 0 },
-    };
 
     return (
         <>
@@ -59,11 +48,6 @@ const Gallery = ({ states, ref }: Props) => {
             <Modal open={modal} setOpen={setModal}>
                 <StateContent state={selectedState ?? {} as IState} setOpen={setModal} />
             </Modal>
-            {/* <Link href={"/#gallery"}>
-                    <button>
-                        ir a galeria
-                    </button>
-            </Link> */}
         </>
 
     )

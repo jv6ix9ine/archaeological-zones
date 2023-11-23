@@ -1,8 +1,10 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
 import { Loader } from '@googlemaps/js-api-loader';
+import { IZone } from '../interfaces/zone';
+import { useRouter } from 'next/navigation';
 
-type Choords = {
+export type Choords = {
     latitude: number,
     longitude: number,
 }
@@ -10,9 +12,11 @@ type Choords = {
 type Props = {
     choords?: Choords
     zoom?: number
+    zones?: IZone[]
 }
 
-const Map = ({ choords, zoom }: Props) => {
+const Map = ({ choords, zoom, zones }: Props) => {
+    const router = useRouter()
     const mapHome = useRef<HTMLDivElement>(null)
     useEffect(() => {
         const initMap = async () => {
@@ -27,8 +31,22 @@ const Map = ({ choords, zoom }: Props) => {
                     lat: choords?.latitude ?? 24.7917594,
                     lng: choords?.longitude ?? -103.2680313
                 },
-                zoom: zoom ?? 5.6,    
+                zoom: zoom ?? 5.6,
             })
+
+            if (zones?.length !== undefined) {
+                zones.map((zone) => {
+                    const marker = new Marker({
+                        map,
+                        position: {
+                            lat: zone.choords.latitude,
+                            lng: zone.choords.longitude
+                        },
+                        title: zone.name
+                    })
+                })
+                return
+            }
             const marker = new Marker({
                 map,
                 position: {
@@ -38,7 +56,7 @@ const Map = ({ choords, zoom }: Props) => {
             })
         }
         initMap()
-    }, [choords?.latitude, choords?.longitude, zoom])
+    }, [choords?.latitude, choords?.longitude, zoom, zones])
     return (
         <div ref={mapHome} className='h-full w-full'></div>
     )
