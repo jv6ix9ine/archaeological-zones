@@ -6,7 +6,7 @@ interface IZoneModel extends Model<IZone> { }
 const zoneSchema = new Schema<IZone, IZoneModel>({
     choords: { latitude: Number, longitude: Number },
     description: String,
-    images: [{ url: String }],
+    images: [{ url: String }, { _id: false }],
     location: String,
     mainImageUrl: String,
     name: String,

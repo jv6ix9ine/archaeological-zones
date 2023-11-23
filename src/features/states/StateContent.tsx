@@ -23,7 +23,6 @@ const StateContent = ({ state, setOpen }: Props) => {
 
             }
         })
-        console.log(zones)
     }, [state, zones])
 
     function handleSelected(zoneId: string){

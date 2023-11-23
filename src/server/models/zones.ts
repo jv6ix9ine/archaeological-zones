@@ -6,7 +6,7 @@ import { IZone } from '@/src/interfaces/zone'
 export default class ZoneModel {
     static async getAll() {
         await connectToDb()
-        return await Zones.find().populate({ path: 'state', model: States })
+        return await Zones.find().populate({ path: 'state', model: States }).sort({ name: 1 })
     }
     static async getbyId(id: string) {
         await connectToDb()

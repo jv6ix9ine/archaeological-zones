@@ -5,8 +5,9 @@ import { NextRequest, NextResponse } from "next/server";
 
 export default class ZoneController {
     static async getAll() {
-        const states = await ZoneModel.getAll()
-        return NextResponse.json(states, { status: 200 })
+        const zones = await ZoneModel.getAll()
+        console.log(zones)
+        return NextResponse.json(zones, { status: 200 })
     }
     static async getById(request: NextRequest, query: Params) {
         if (query.params?.id === undefined)
@@ -39,7 +40,6 @@ export default class ZoneController {
         if (query.params?.id === undefined)
             return NextResponse.json("No valid identifier provided", { status: 418 });
         const zoneId = query.params.id
-        console.log(zoneId)
         const payload = await request.json()
         const response = await ZoneModel.update(zoneId, payload)
         return NextResponse.json(response, { status: 200 })

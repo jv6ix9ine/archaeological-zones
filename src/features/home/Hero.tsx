@@ -15,7 +15,7 @@ const gridImages = [
 
 const Hero = () => {
     return (
-        <section className='w-full h-screen flex flex-col lg:flex-row gap-6 pt-20 lg:pb-4 lg:px-6' id='home'>
+        <section className='w-full h-screen flex flex-col lg:flex-row gap-6 pt-14 ' id='home'>
             <div className='w-full lg:w-[40%] h-[50%] lg:h-full flex flex-col justify-between lg:justify-evenly items-center px-4 text-neutral-950 dark:text-neutral-50'>
                 <div className="text-4xl relative w-full max-w-xs md:max-w-md">
                     <p>Descubre lo que</p>
@@ -35,7 +35,7 @@ const Hero = () => {
                 <PopularZones />
                 <Button className='hidden md:block' variant="light" icon={<ArrowDownIcon width={20} height={20} className='text-inherit' />}>Explorar</Button>
             </div>
-            <div className='hidden h-[50%] lg:h-full md:grid grid-cols-3 grid-rows-3 lg:w-[60%] gap-2'>
+            <div className='hidden h-[50%] lg:h-full md:grid grid-cols-3 grid-rows-3 lg:w-[60%] gap-2 p-4'>
                 {
                     gridImages.map((item, index) => (
                         <div key={index} className={`${item.span} overflow-hidden rounded-md`}>
@@ -50,7 +50,7 @@ const Hero = () => {
                     ))
                 }
             </div>
-            <div className='h-[50%] w-full md:hidden  overflow-hidden'>
+            <div className='h-[50%] w-full md:hidden overflow-hidden'>
                 <Image
                     alt='Grid Image'
                     src={gridImages[0].url}

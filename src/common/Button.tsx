@@ -14,9 +14,8 @@ type Props = {
 
 const Button = ({ className, variant, icon, children }: Props) => {
     return (
-        <Link href={`/#zones`}>
+        <Link href={`/#zones`} className='w-48'>
             <button
-                // onClick={() => router.push(`/home#gallery`, { scroll: true })}
                 className={`${className} ${Variants[String(variant) as keyof typeof Variants]} w-48 px-8 py-2 rounded-full duration-300 `}
             >
                 <span className="flex items-center justify-center gap-2 text-inherit">

@@ -6,7 +6,7 @@ import { IState } from '@/src/interfaces/state'
 export default class StateModel {
     static async getAll() {
         await connectToDb()
-        return await States.find().populate({ path: 'zones', model: Zones }).lean()
+        return await States.find().populate({ path: 'zones', model: Zones }).sort({ name: 1 })
     }
     static async getbyId(id: string) {
         await connectToDb()

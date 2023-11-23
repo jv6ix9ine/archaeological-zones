@@ -8,7 +8,7 @@ type Props = {
 const ZonesPage = ({ zones }: Props) => {
 
     return (
-        <section className="pt-16 container mx-auto">
+        <section className="pt-16 p-4 container mx-auto">
             <div className='py-4'>
                 <h1 className="text-3xl md:text-4xl">Zonas arqueológicas</h1>
             </div>

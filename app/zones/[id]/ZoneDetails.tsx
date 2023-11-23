@@ -7,8 +7,6 @@ type Props = {
 }
 
 const ZoneDetails = ({ zone }: Props) => {
-  console.log(zone)
-
   return (
     <div className='pt-16 container max-w-2xl mx-auto p-4'>
       <div className="pt-2">

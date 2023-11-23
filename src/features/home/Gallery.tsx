@@ -23,7 +23,7 @@ const Gallery = ({ states, ref }: Props) => {
         <>
             <section className="py-16 px-4 lg:px-6 max-w-7xl mx-auto text-neutral-950 dark:text-neutral-50" id='zones'>
                 <div className='py-8'>
-                    <h1 className="text-3xl md:text-4xl">Zonas arqueológicas</h1>
+                    <h1 className="text-3xl md:text-4xl">Estados de la República Mexicana</h1>
                 </div>
                 <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
                     {
