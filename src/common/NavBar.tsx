@@ -1,5 +1,5 @@
 'use client'
-import { ListBulletIcon, MapIcon, MapPinIcon, Square2StackIcon, Squares2X2Icon } from '@heroicons/react/24/outline'
+import { ListBulletIcon, MapIcon, MapPinIcon, RectangleStackIcon, Square2StackIcon, Squares2X2Icon } from '@heroicons/react/24/outline'
 import { Bars3BottomRightIcon, HomeIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline'
 import { useRouter } from 'next/navigation'
 import ThemeSwitcher from './ThemeSwitcher'
@@ -21,13 +21,13 @@ const NavBar = () => {
                         onClick={() => router.push("/map")}
                         className='p-2 rounded-lg hover:bg-neutral-300 dark:hover:bg-neutral-700 hover:scale-105 active:scale-95 duration-200 uration-300'
                     >
-                        <MapPinIcon width={24} height={24} className='text-neutral-950 dark:text-neutral-50' />
+                        <MapIcon width={24} height={24} className='text-neutral-950 dark:text-neutral-50' />
                     </button>
                     <button
                         onClick={() => router.push("/zones")}
                         className='p-2 rounded-lg hover:bg-neutral-300 dark:hover:bg-neutral-700 hover:scale-105 active:scale-95 duration-200 uration-300'
                     >
-                        <ListBulletIcon width={24} height={24} className='text-neutral-950 dark:text-neutral-50' />
+                        <MagnifyingGlassIcon width={24} height={24} className='text-neutral-950 dark:text-neutral-50' />
                     </button>
                 </div>
             </div>

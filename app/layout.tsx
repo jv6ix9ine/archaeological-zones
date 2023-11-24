@@ -19,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" style={{scrollBehavior: 'smooth'}}>
-      <body className={`${raleway.className} bg-neutral-100 dark:bg-neutral-950 duration-300`} suppressHydrationWarning>
+    <html lang="es" suppressHydrationWarning id='root'>
+      <body className={`${raleway.className} bg-neutral-100 dark:bg-neutral-950 duration-300`}>
         <ThemeContext attribute="class" defaultTheme="system" enableSystem>
           <NavBar />
           <main className='w-full overflow-auto'>

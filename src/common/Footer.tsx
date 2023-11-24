@@ -1,6 +1,7 @@
 import ThemeSwitcher from './ThemeSwitcher'
 import Link from 'next/link'
 import { AcademicCapIcon } from '@heroicons/react/24/outline'
+import FullScreenSwitcher from './FullScreenSwitcher'
 
 const Footer = () => {
     return (
@@ -8,7 +9,10 @@ const Footer = () => {
             <div className='container mx-auto h-full flex flex-col justify-between gap-6'>
                 <div className='flex justify-between items-center'>
                     <p>Zonas Arqueológicas de México &copy; 2023</p>
-                    <ThemeSwitcher />
+                    <div>
+                        <ThemeSwitcher />
+                        {/* <FullScreenSwitcher /> */}
+                    </div>
                 </div>
                 <div>
                     <ul className='grid grid-cols-2 gap-4 md:flex md:gap-8'>

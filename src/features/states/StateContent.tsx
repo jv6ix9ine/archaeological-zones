@@ -12,25 +12,19 @@ type Props = {
 }
 
 const StateContent = ({ state, setOpen }: Props) => {
-
     const [zones, setZones] = useState<IZone[]>([])
     const router = useRouter()
-
     useEffect(() => {
         ZoneService.getByStateId(state._id ?? "").then((response) => {
             if (response.data) {
                 setZones(response.data)
-
             }
         })
     }, [state, zones])
-
     function handleSelected(zoneId: string){
         setOpen(false)
         router.push(`zones/${zoneId}`)
     }
-
-
     return (
         <div className='w-full flex flex-col h-[90vh]'>
             <Image src={`${state?.imageUrl}`}

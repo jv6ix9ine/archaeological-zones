@@ -6,7 +6,6 @@ import { NextRequest, NextResponse } from "next/server";
 export default class ZoneController {
     static async getAll() {
         const zones = await ZoneModel.getAll()
-        console.log(zones)
         return NextResponse.json(zones, { status: 200 })
     }
     static async getById(request: NextRequest, query: Params) {
