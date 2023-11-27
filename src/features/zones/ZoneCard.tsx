@@ -1,4 +1,3 @@
-import React from 'react'
 import { IZone } from '../../interfaces/zone'
 import Image from 'next/image'
 import { ArrowRightIcon } from '@heroicons/react/24/outline'

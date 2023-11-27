@@ -21,7 +21,7 @@ const StateContent = ({ state, setOpen }: Props) => {
             }
         })
     }, [state, zones])
-    function handleSelected(zoneId: string){
+    function handleSelected(zoneId: string) {
         setOpen(false)
         router.push(`zones/${zoneId}`)
     }
@@ -52,8 +52,11 @@ const StateContent = ({ state, setOpen }: Props) => {
             >
                 {
                     // zones.length > 0 ?
-                    zones.map((zone, index) => (
-                        <div key={index} className={`relative overflow-hidden rounded-md break-inside-auto`} onClick={() => handleSelected(zone._id)} >
+                    zones.map((zone) => (
+                        <div key={zone._id}
+                            className={`relative overflow-hidden rounded-md break-inside-auto`}
+                            onClick={() => handleSelected(zone._id ?? "")}
+                        >
                             <Image
                                 alt='Grid Image'
                                 src={zone.mainImageUrl ?? ""}

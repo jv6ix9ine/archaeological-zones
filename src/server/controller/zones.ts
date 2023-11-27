@@ -1,6 +1,7 @@
 import { IZone } from "@/src/interfaces/zone";
 import ZoneModel from "@/src/server/models/zones";
 import { Params } from "@/src/services/api";
+import { revalidatePath } from "next/cache";
 import { NextRequest, NextResponse } from "next/server";
 
 export default class ZoneController {
@@ -41,6 +42,8 @@ export default class ZoneController {
         const zoneId = query.params.id
         const payload = await request.json()
         const response = await ZoneModel.update(zoneId, payload)
+        revalidatePath('/panel/zones')
+        // revalidatePath(`/panel/zones/${zoneId}`, "page")
         return NextResponse.json(response, { status: 200 })
     }
     static async delete(request: NextRequest, query: Params) {

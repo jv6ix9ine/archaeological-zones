@@ -65,4 +65,41 @@ export default class ZoneService {
             }))
         }
     }
+    static async createZone(zone: IZone) {
+        const response = await fetch(`${BASE_URL}/api/zones/`, {
+            method: "POST",
+            body: JSON.stringify(zone)
+        });
+        try {
+            const zone = await response.json() as IZone
+            return new Promise<ResponseType<IZone>>(resolve => resolve({
+                success: true,
+                data: zone,
+                message: 'Zone created successfully'
+            }))
+        } catch (error) {
+            return new Promise<ResponseType<IZone>>(resolve => resolve({
+                success: false,
+                message: (error as Error).message
+            }))
+        }
+    }
+    static async updateZone(zoneId: string, body: IZone) {
+        try {
+            await fetch(`${BASE_URL}/api/zones/${zoneId}`, {
+                method: "PATCH",
+                body: JSON.stringify(body)
+            })
+            return new Promise<ResponseType<IZone>>(resolve => resolve({
+                success: true,
+                message: 'Zone updated successfully'
+            }))
+        } catch (error) {
+            return new Promise<ResponseType<IZone>>(resolve => resolve({
+                success: false,
+                message: (error as Error).message
+            }))
+        }
+
+    }
 }

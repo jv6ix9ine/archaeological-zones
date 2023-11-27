@@ -7,6 +7,11 @@ const nextConfig = {
                 destination: '/home',
                 permanent: true,
             },
+            // {
+            //     source: '/panel',
+            //     destination: '/home',
+            //     permanent: true,
+            // },
         ]
     },
     optimizeFonts: true,

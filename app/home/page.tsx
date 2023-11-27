@@ -1,4 +1,3 @@
-import React from 'react'
 import HomePage from './HomePage'
 import StateService from '@/src/services/states'
 import ZoneService from '@/src/services/zones'
