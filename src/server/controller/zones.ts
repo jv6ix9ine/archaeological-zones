@@ -43,7 +43,6 @@ export default class ZoneController {
         const payload = await request.json()
         const response = await ZoneModel.update(zoneId, payload)
         revalidatePath('/panel/zones')
-        // revalidatePath(`/panel/zones/${zoneId}`, "page")
         return NextResponse.json(response, { status: 200 })
     }
     static async delete(request: NextRequest, query: Params) {
@@ -51,6 +50,7 @@ export default class ZoneController {
             return NextResponse.json("No valid identifier provided", { status: 418 });
         const zoneId = query.params.id
         const response = await ZoneModel.delete(zoneId)
+        revalidatePath('/panel/zones')
         return NextResponse.json(response, { status: 200 })
     }
 }

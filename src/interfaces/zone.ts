@@ -10,7 +10,7 @@ export interface IZone {
     mainImageUrl?: string
     name: string
     schedules: string
-    state: IState
+    state?: string
     updatedAt?: Date
 }
 
@@ -24,9 +24,7 @@ interface IImage {
 }
 
 export interface IZoneForm {
-    _id?: string
     choords: IChoords
-    createdAt?: Date
     description: string
     location: string
     mainImageUrl?: string
@@ -35,8 +33,7 @@ export interface IZoneForm {
     imageUrl3?: string
     name: string
     schedules: string
-    state: IState
-    updatedAt?: Date
+    state?: string
 }
 
 export const DEFAULT_ZONE: IZoneForm = {
@@ -45,7 +42,7 @@ export const DEFAULT_ZONE: IZoneForm = {
     location: "",
     name: "",
     schedules: "",
-    state: {} as IState,
+    state: "",
     mainImageUrl: "",
     imageUrl1: "",
     imageUrl2: "",

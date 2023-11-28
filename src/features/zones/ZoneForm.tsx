@@ -15,17 +15,6 @@ type Props = {
 const ZoneForm = ({ zone }: Props) => {
     const router = useRouter()
     const [states, setStates] = useState<IState[]>()
-    const [ loading, setloading ] = useState(false)
-    useEffect(() => {
-        setloading(true)
-        StateService.getAll().then((response) => {
-            if (response.success) {
-                setStates(response.data)
-                setloading(false)
-            }
-        })
-    }, [])
-
     const {
         handleSubmit,
         formState: { errors },
@@ -37,6 +26,7 @@ const ZoneForm = ({ zone }: Props) => {
         defaultValues: zone ?
             {
                 ...zone,
+                state: (zone.state as unknown as IState)._id,
                 imageUrl1: zone.images ? zone.images[0].url : "",
                 imageUrl2: zone.images ? zone.images[1].url : "",
                 imageUrl3: zone.images ? zone.images[2].url : ""
@@ -45,6 +35,15 @@ const ZoneForm = ({ zone }: Props) => {
                 ...DEFAULT_ZONE
             }
     })
+
+    useEffect(() => {
+        StateService.getAll().then((response) => {
+            if (response.success) {
+                setStates(response.data)
+                router.refresh()
+            }
+        })
+    }, [router])
 
     function handleForm(formData: IZoneForm) {
         const images = [
@@ -66,24 +65,17 @@ const ZoneForm = ({ zone }: Props) => {
             return ZoneService.updateZone(String(zone._id), payload).then((response) => {
                 if (response.success) {
                     alert(response.message)
-                    reset()
+                    router.refresh()
                 }
-            }).finally(()=>{
-                router.refresh()
             })
         }
         ZoneService.createZone(payload).then((response) => {
             if (response.success) {
                 alert(response.message)
                 reset()
+                router.refresh()
             }
         })
-    }
-
-    if(loading){
-        return(
-            <div className="">Cargando...</div>
-        )
     }
 
     return (
@@ -105,6 +97,31 @@ const ZoneForm = ({ zone }: Props) => {
                         />
                     )}
                 />
+                
+                <Controller
+                    control={control}
+                    name="state"
+                    rules={{ required: "Elije un Estado" }}
+                    render={({ field }) => (
+                        <select
+                            className="h-12 p-2"
+                            value={field.value}
+                            onChange={field.onChange}
+                        >
+                            <option value={""}>
+                                {"Seleccionar"}
+                            </option>
+                            {
+                                states?.map((state) => (
+                                    <option key={state._id} value={state._id}>
+                                        {state.name}
+                                    </option>
+                                ))
+                            }
+                        </select>
+                    )}
+                />
+                {errors.state && <span className="text-red-500 text-sm">{errors.state.message}</span>}
 
                 <div className="grid grid-cols-2 gap-3">
                     <Controller
@@ -143,7 +160,8 @@ const ZoneForm = ({ zone }: Props) => {
                     rules={{ required: true }}
                     render={({ field }) => (
                         <textarea
-                            className="h-12 p-2"
+                            rows={6}
+                            className="p-2"
                             placeholder="Description..."
                             value={field.value}
                             onChange={field.onChange}
@@ -156,7 +174,8 @@ const ZoneForm = ({ zone }: Props) => {
                     rules={{ required: true }}
                     render={({ field }) => (
                         <textarea
-                            className="h-12 p-2"
+                            rows={3}
+                            className="p-2"
                             placeholder="Location"
                             value={field.value}
                             onChange={field.onChange}
@@ -176,7 +195,6 @@ const ZoneForm = ({ zone }: Props) => {
                         />
                     )}
                 />
-
                 <Controller
                     control={control}
                     name="mainImageUrl"
@@ -236,33 +254,13 @@ const ZoneForm = ({ zone }: Props) => {
                         />
                     )}
                 />
-                <Controller
-                    control={control}
-                    name="state"
-                    rules={{ required: true }}
-                    render={({ field }) => (
-                        <select
-                            className="h-12 p-2"
-                            placeholder="Select state"
-                            value={field.value._id}
-                            onChange={field.onChange}
-                        >
-                            {
-                                states?.map((state) => (
-                                    <option key={state._id} value={state._id === undefined ? "" : state._id}>
-                                        {state.name}
-                                    </option>
-                                ))
-                            }
-                        </select>
-                    )}
-                />
+
                 <div className="w-full">
                     {
                         zone ?
-                        <button className="bg-neutral-500 w-48 h-12 p-2" type="submit">Save</button>
-                        :
-                        <button className="bg-neutral-500 w-48 h-12 p-2" type="submit">Create</button>
+                            <button className="bg-neutral-500 w-48 h-12 p-2" type="submit">Save</button>
+                            :
+                            <button className="bg-neutral-500 w-48 h-12 p-2" type="submit">Create</button>
                     }
                 </div>
             </form>

@@ -100,6 +100,25 @@ export default class ZoneService {
                 message: (error as Error).message
             }))
         }
+    }
 
+    static async deleteZone(zoneId: string) {
+        const response = await fetch(`${BASE_URL}/api/zones/${zoneId}`, {
+            method: "DELETE",
+            cache: "no-cache"
+        });
+        try {
+            const zone = await response.json() as IZone[]
+            return new Promise<ResponseType<IZone[]>>(resolve => resolve({
+                success: true,
+                data: zone,
+                message: 'Zone deleted successfully'
+            }))
+        } catch (error) {
+            return new Promise<ResponseType<IZone[]>>(resolve => resolve({
+                success: false,
+                message: (error as Error).message
+            }))
+        }
     }
 }
