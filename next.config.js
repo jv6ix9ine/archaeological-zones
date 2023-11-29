@@ -22,7 +22,7 @@ const nextConfig = {
                 hostname: '**.**.**',
                 port: '',
                 pathname:'/**'
-            }
+            },
         ]
     }
 }

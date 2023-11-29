@@ -1,4 +1,5 @@
 import Map from "@/src/common/Map"
+import { IState } from "@/src/interfaces/state"
 import { IZone } from "@/src/interfaces/zone"
 import Image from 'next/image'
 
@@ -12,7 +13,7 @@ const ZoneDetails = ({ zone }: Props) => {
       <div className="pt-2">
         <h1 className="text-3xl font-semibold mb-2">{zone.name}</h1>
         <div>
-          <p className="font-semibold">Estado: {zone.state.name ?? ""}</p>
+          <p className="font-semibold">{(zone.state as unknown as IState).name ?? ""}</p>
           {/* <p className="font-semibold">Capital: {zone.state.capital}</p> */}
           <br />
         </div>

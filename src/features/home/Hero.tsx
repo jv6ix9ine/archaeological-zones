@@ -5,12 +5,12 @@ import Button from '@/src/common/Button'
 import Link from 'next/link'
 
 const gridImages = [
-    { url: "/hero/4.webp" },
+    { url: "https://images.unsplash.com/photo-1565060850879-b97d5f5621b5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
     { url: "/hero/2.webp", span: "row-span-2" },
     { url: "/hero/3.webp" },
     { url: "/hero/5.webp" },
     { url: "/hero/6.webp", span: "row-span-2" },
-    { url: "/hero/1.webp", span: "col-span-2" },
+    { url: "https://plus.unsplash.com/premium_photo-1697730030977-ea0505bd45ac?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", span: "col-span-2" },
 ]
 
 const Hero = () => {
