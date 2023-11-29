@@ -11,6 +11,7 @@ type Props = {
 }
 
 const ZonePanelPage = ({ zones }: Props) => {
+    console.log(zones.length)
     const router = useRouter()
     const handleDelete = async(zoneId: string) => {
         await ZoneService.deleteZone(zoneId)

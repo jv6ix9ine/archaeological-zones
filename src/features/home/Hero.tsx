@@ -15,7 +15,7 @@ const gridImages = [
 
 const Hero = () => {
     return (
-        <section className='w-full h-screen flex flex-col lg:flex-row gap-6 pt-20 lg:pt-14 ' id='home'>
+        <section className='w-full h-screen flex flex-col lg:flex-row gap-6 pt-20 lg:pt-14' id='home'>
             <div className='w-full lg:w-[40%] h-[50%] lg:h-full flex flex-col justify-between lg:justify-evenly items-center px-4 text-neutral-950 dark:text-neutral-50'>
                 <div className="text-4xl relative w-full max-w-xs md:max-w-md">
                     <p>Descubre lo que</p>

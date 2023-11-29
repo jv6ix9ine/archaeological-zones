@@ -19,8 +19,9 @@ const ZoneDetails = ({ zone }: Props) => {
         </div>
         <Image src={zone.mainImageUrl ?? ""} alt={zone.name} className="w-full object-cover object-center mb-4 rounded-md hover:saturate-[1.25] h-72" width={1000} height={1000} />
         <p className="mt-4"><span className="font-semibold">Ubicación:</span> {zone.location}</p>
+        <br />
         <p><span className="font-semibold">Horarios:</span> {zone.schedules}</p>
-        <p className="mt-4">{zone.description}</p>
+        <p className="mt-4 text-justify">{zone.description}</p>
         <div className="my-4 md:columns-2 space-y-4 py-4 gap-4">
           {
             zone.images?.map((item) => (

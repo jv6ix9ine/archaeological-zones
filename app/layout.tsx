@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={`${raleway.className} bg-neutral-100 dark:bg-neutral-950 duration-300`}>
         <ThemeContext attribute="class" defaultTheme="system" enableSystem>
           <NavBar />
-          <main className='w-full overflow-auto'>
+          <main className='w-full'>
             {children}
           </main>
           <Footer />

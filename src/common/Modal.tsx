@@ -2,6 +2,7 @@
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Dispatch, ReactChild, ReactFragment, ReactPortal, SetStateAction } from 'react'
+import { useEffect } from 'react'
 
 type Props = {
   setOpen: Dispatch<SetStateAction<boolean>>
@@ -14,6 +15,18 @@ const Modal = ({ open, setOpen, children }: Props) => {
     hidden: { opacity: 0, y: '-100%' },
     visible: { opacity: 1, y: 0 },
   };
+
+  useEffect(() => {
+    let body = document.querySelector("body")
+    if(open){
+      body?.setAttribute("style", "overflow: hidden")
+    }
+
+    return () => {
+      body?.setAttribute("style", "overflow: auto")
+    }
+  }, [open])
+
   return (
     <AnimatePresence>
       {
@@ -24,7 +37,7 @@ const Modal = ({ open, setOpen, children }: Props) => {
           exit={{ opacity: 0, scale: 0.3 }}
           transition={{ duration: 0.2 }}
         >
-          <div className="absolute inset-0 bg-transparent" onClick={() => setOpen(!open)}></div>
+          <div className="absolute inset-0 bg-transparent " onClick={() => setOpen(!open)}></div>
           <div className="relative w-[90%] sm:w-[80%] max-w-4xl bg-neutral-50 dark:bg-neutral-900 rounded-lg max-h-[90%] overflow-auto shadow-2xl">
             {children}
             <button onClick={() => setOpen(!open)} className='absolute top-2 right-2 shadow-xl rounded-full p-1 hover:rotate-90 duration-150 bg-neutral-50 dark:bg-neutral-800'>
