@@ -55,7 +55,7 @@ const StateContent = ({ state, setOpen }: Props) => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.2, delay: 0.35 }}
                     >
-                        <h1 className='text-xl'>{loader ? "Cargando..." : "Sin zonas arqueológicas..."}</h1>
+                        <h1 className='text-lg'>{loader ? "Cargando..." : "Sin zonas arqueológicas..."}</h1>
                     </motion.div>
                     :
                     <motion.div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4  p-4'
