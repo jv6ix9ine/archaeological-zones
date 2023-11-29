@@ -38,7 +38,7 @@ const Modal = ({ open, setOpen, children }: Props) => {
           transition={{ duration: 0.2 }}
         >
           <div className="absolute inset-0 bg-transparent " onClick={() => setOpen(!open)}></div>
-          <div className="relative w-[90%] sm:w-[80%] max-w-4xl bg-neutral-50 dark:bg-neutral-900 rounded-lg max-h-[90%] overflow-auto shadow-2xl">
+          <div className="relative w-[90%] sm:w-[80%] max-w-4xl bg-neutral-50 dark:bg-neutral-900 rounded-lg max-h-[95%] overflow-auto shadow-2xl">
             {children}
             <button onClick={() => setOpen(!open)} className='absolute top-2 right-2 shadow-xl rounded-full p-1 hover:rotate-90 duration-150 bg-neutral-50 dark:bg-neutral-800'>
               <XMarkIcon width={24} height={24} className='text-inherit' />

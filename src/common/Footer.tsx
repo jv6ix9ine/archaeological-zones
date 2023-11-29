@@ -24,7 +24,7 @@ const Footer = () => {
                 </div>
                 <div className='flex gap-4 items-center'>
                     <AcademicCapIcon width={20} height={20} className='text-neutral-900 dark:text-neutral-50 ' />
-                    <p>IDYGS-73 | Noemi, German, Gabriel, Donovan and Joath.</p>
+                    <p className='uppercase'>IDYGS-73 | Noemi, German, Gabriel, Donovan & Joath.</p>
                 </div>
             </div>
         </footer>

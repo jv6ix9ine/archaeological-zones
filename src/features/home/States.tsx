@@ -28,19 +28,21 @@ const States = ({ states, ref }: Props) => {
     return (
         <>
             <section className="py-16 px-4 lg:px-6 max-w-7xl mx-auto text-neutral-950 dark:text-neutral-50" id='zones'>
-                <h1 className="text-4xl mt-4">Estados de la República Mexicana</h1>
-                <div className='my-6 lg:flex' >
-                    <div className="relative w-full max-w-lg">
-                        <input
-                            autoComplete={'false'}
-                            type="text"
-                            placeholder="Busqueda rapida..."
-                            className="w-full rounded-lg duration-200 border-neutral-200 bg-neutral-200 dark:bg-neutral-800 pe-4 shadow-sm h-11 pl-10 text-neutral-900 dark:text-neutral-50"
-                            onChange={handleChange}
-                        />
-                        <span className='pointer-events-none duration-200 absolute inset-y-0 start-0 grid w-10 place-content-center text-inherit'>
-                            <MagnifyingGlassIcon width={20} height={20} className='' />
-                        </span>
+                <div className='w-full flex flex-col items-center'>
+                    <h1 className="text-4xl mt-4">Estados de la República Mexicana</h1>
+                    <div className='my-6 md:flex justify-center w-full' >
+                        <div className="relative w-full max-w-xl">
+                            <input
+                                autoComplete={'false'}
+                                type="text"
+                                placeholder="Busqueda rápida..."
+                                className="w-full rounded-lg duration-200 border-neutral-200 bg-neutral-200 dark:bg-neutral-800 pe-4 shadow-sm h-11 pl-10 text-neutral-900 dark:text-neutral-50"
+                                onChange={handleChange}
+                            />
+                            <span className='pointer-events-none duration-200 absolute inset-y-0 start-0 grid w-10 place-content-center text-inherit'>
+                                <MagnifyingGlassIcon width={20} height={20} className='' />
+                            </span>
+                        </div>
                     </div>
                 </div>
                 {

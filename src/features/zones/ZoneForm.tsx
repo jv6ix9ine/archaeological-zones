@@ -79,7 +79,7 @@ const ZoneForm = ({ zone }: Props) => {
     }
 
     return (
-        <div className="py-6" onSubmit={handleSubmit(handleForm)}>
+        <div className="py-6 px-4" onSubmit={handleSubmit(handleForm)}>
             <h1 className="mb-4">Ingresar zona arqueologica</h1>
             <form className="flex flex-col gap-4" autoComplete="false">
 
