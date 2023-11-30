@@ -42,7 +42,7 @@ const ZonesPage = ({ zones }: Props) => {
                             onChange={handleChange}
                         />
                         <span className='pointer-events-none duration-200 absolute inset-y-0 start-0 grid w-10 place-content-center text-inherit'>
-                            <MagnifyingGlassIcon width={20} height={20} className='' />
+                            <MagnifyingGlassIcon width={20} height={20} />
                         </span>
                     </div>
                 </div>

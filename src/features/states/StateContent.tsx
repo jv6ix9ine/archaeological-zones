@@ -70,6 +70,7 @@ const StateContent = ({ state, setOpen }: Props) => {
                                     className={`relative overflow-hidden rounded-md h-48`}
                                     onClick={() => handleSelected(zone._id ?? "")}
                                 >
+                                    <div className='absolute z-10 h-14 w-full bg-gradient-to-b from-transparent to-neutral-800 opacity-80 bottom-0'></div>
                                     <Image
                                         alt='Grid Image'
                                         src={zone.mainImageUrl ?? ""}
@@ -77,7 +78,7 @@ const StateContent = ({ state, setOpen }: Props) => {
                                         width={500}
                                         className='h-full w-full hover:saturate-[1.25] object-cover object-center hover:scale-110 hover:cursor-pointer duration-150'
                                     />
-                                    <span className='absolute z-20 bottom-4 left-4 text-2xl text-neutral-50 font-medium'>
+                                    <span className='absolute z-20 bottom-2 left-2 text-2xl text-neutral-50 font-medium'>
                                         {zone.name}
                                     </span>
                                 </div>
