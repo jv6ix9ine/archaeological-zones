@@ -1,5 +1,8 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+
+
+import type { NextConfig } from 'next'
+
+const nextConfig: NextConfig = {
     async redirects() {
         return [
             {
@@ -7,14 +10,9 @@ const nextConfig = {
                 destination: '/home',
                 permanent: true,
             },
-            // {
-            //     source: '/panel',
-            //     destination: '/home',
-            //     permanent: true,
-            // },
         ]
     },
-    optimizeFonts: true,
+    // optimizeFonts: true,
     images: {
         remotePatterns:[
             {
@@ -27,4 +25,4 @@ const nextConfig = {
     }
 }
 
-module.exports = nextConfig
+export default nextConfig
