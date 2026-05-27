@@ -20,6 +20,7 @@ const States = ({ states, ref }: Props) => {
     const [modal, setModal] = useState(false)
     const [selectedState, setSelectedState] = useState<IState>()
 
+    // console.log(states)
     const handleSelectedState = (state: IState) => {
         setSelectedState(state)
         setModal(!modal)
