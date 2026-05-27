@@ -29,6 +29,8 @@ export default class ZoneController {
             ...payload
         }
         const response = await ZoneModel.create(newState)
+        revalidatePath('/zones')
+        revalidatePath('/panel/zones')
         return NextResponse.json(response, { status: 201 })
     }
     static async createMany(request: NextRequest) {
@@ -42,6 +44,8 @@ export default class ZoneController {
         const zoneId = query.params.id
         const payload = await request.json()
         const response = await ZoneModel.update(zoneId, payload)
+        revalidatePath('/zones')
+        revalidatePath(`/zones/${zoneId}`)
         revalidatePath('/panel/zones')
         return NextResponse.json(response, { status: 200 })
     }
@@ -50,6 +54,8 @@ export default class ZoneController {
             return NextResponse.json("No valid identifier provided", { status: 418 });
         const zoneId = query.params.id
         const response = await ZoneModel.delete(zoneId)
+        revalidatePath('/zones')
+        revalidatePath(`/zones/${zoneId}`)
         revalidatePath('/panel/zones')
         return NextResponse.json(response, { status: 200 })
     }

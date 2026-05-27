@@ -24,8 +24,8 @@ const ZoneDetails = ({ zone }: Props) => {
         <p className="mt-4 text-justify">{zone.description}</p>
         <div className="my-4 grid md:grid-cols-2 py-4 gap-4">
           {
-            zone.images?.map((item) => (
-              <div key={item.url} className={`overflow-hidden rounded-md`}>
+            zone.images?.map((item, i) => (
+              <div key={i} className={`overflow-hidden rounded-md`}>
                 <Image
                   alt='Grid Image'
                   src={item.url}
